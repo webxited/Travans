@@ -47,6 +47,15 @@
         .text-lg-start{
             text-align : center !important;
         }
+        @media (max-width: 991.98px) {
+            model-viewer {
+                width: 100vw;
+                height:100vw;
+                right:20px;
+                margin: unset;
+                align:center !important;
+            }
+        }
     </style>
 </head>
 
@@ -106,7 +115,6 @@
                             {% endfor %}
                         </div>
                         <div class="col-lg-6 text-center text-lg-end overflow-hidden">
-                            {% comment %} <img class="img-fluid" src="{{image.backgroundImage.url}}" alt=""> {% endcomment %}
                             {% for threeD in threeD %}
                             <model-viewer src="{{threeD.object_file.url}}" camera-controls auto-rotate disable-zoom></model-viewer>
                             {% endfor %}
