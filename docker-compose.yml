@@ -1,0 +1,18 @@
+
+services:
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8001
+    volumes:
+      - ~/code/env/Travans/.env:/code/Travans/.env
+      - ~/code/db/Travans:/code/Travans/db
+    ports:
+      - "8001:8001"
+    depends_on:
+      - db
+
+  db:
+    image: sqlite:latest
+    volumes:
+      - ~/code/db/Travans:/var/lib/sqlite
+
