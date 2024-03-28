@@ -27,5 +27,6 @@ MIDDLEWARE = [
 CSRF_TRUSTED_ORIGINS = [
     'https://travans.in',
     'http://travans.in',
+    'https://www.travans.in'
 ]
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
